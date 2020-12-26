@@ -58,9 +58,8 @@ function repeatStringNumTimes(str, num) {
 // Return the truncated string with a ... ending.
 
 function truncateString(str, num) {
-    let newString = str.slice(0, num);
-    if (newString.length >= num) newString += "...";
-    return newString;
+    if (str.length > num) return str.slice(0, num) + "...";
+    else return str;
   }
   
-  console.log(truncateString("A-tisket a-tasket A green and yellow basket", 888));
+  console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8999));
