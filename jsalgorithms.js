@@ -31,4 +31,13 @@ function findLongestWordLength(str) {
     ]
   ));
 
+  // Check if a string (first argument, str) ends with the given target string (second argument, target). Using substring method.
+
+function confirmEnding(str, target) {
+    let finalIndex = str.length;
+    let startIndex = finalIndex - target.length;
+    console.log(finalIndex, startIndex);
+    return str.substring(startIndex, finalIndex) == target;
+  }
   
+  console.log(confirmEnding("Bastian", "idan"));
