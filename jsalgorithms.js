@@ -69,3 +69,12 @@ function findElement(arr, func) {
     return arr.find(func);
   }
   console.log(findElement([1, 5, 3, 8], num => num % 2 === 0));
+
+// Check if a value is classified as a boolean primitive. Return true or false.
+// Boolean primitives are true and false.
+
+  function booWho(bool) {
+    return bool === true || bool === false;
+  }
+  
+  console.log(booWho(false));
