@@ -78,3 +78,23 @@ function findElement(arr, func) {
   }
   
   console.log(booWho(false));
+
+  // Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+// For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+function titleCase(str) {
+  let lowerCased = str.toLowerCase();
+  let words = lowerCased.match(/\S+/ig);
+  let firstLetter = '';
+  let newWord = '';
+  let newSentence = '';
+  words.forEach(word => {
+    firstLetter = word[0].toUpperCase();
+    newWord = word.replace(/[a-z]/, firstLetter);
+    newSentence += newWord + " ";
+  });
+  newSentence = newSentence.replace(/\s$/, "");
+  return newSentence;
+}
+
+console.log(titleCase("I'm a little tea pot"));
