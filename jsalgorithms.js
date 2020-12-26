@@ -31,7 +31,7 @@ function findLongestWordLength(str) {
     ]
   ));
 
-  // Check if a string (first argument, str) ends with the given target string (second argument, target). Using substring method.
+  // Check if a string (first argument, str) ends with the given target string (second argument, target).Using substring method.
 
 function confirmEnding(str, target) {
     let finalIndex = str.length;
@@ -41,3 +41,15 @@ function confirmEnding(str, target) {
   }
   
   console.log(confirmEnding("Bastian", "idan"));
+
+//Repeat a given string str (first argument) for num times (second argument). 
+// Return an empty string if num is not a positive number. 
+// For the purpose of this challenge, do not use the built-in .repeat() method.
+
+function repeatStringNumTimes(str, num) {
+    let newString = ""
+    for (let i = 0; i < num; i++) newString+= str;
+    return newString
+  }
+  
+  console.log(repeatStringNumTimes("abc", 3));
